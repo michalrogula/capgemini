@@ -1,0 +1,13 @@
+{
+  "name": "Coding-Exercise",
+  "version": "1.0.0",
+  "description": "Capgemini - Coding Exercise",
+  "private": true,
+  "author": "Michal Rogula",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "angular": "^1.7.8",
+    "angular-drag-and-drop-lists": "^2.1.0",
+    "angular-local-storage": "^0.7.1"
+  }
+}

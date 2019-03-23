@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	margin: 0; 
+}
+
+body {
+  	font-size: 20px;
+	background: #F5F5F5;
+}
+
+.task-pool-container {
+	display: flex;
+	justify-content: center;
+}
+
+.users-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 20rem;
+}
+
+/* Container styles - START */
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 1rem;
+}
+
+.container .list {
+	width: 14rem;
+	height: 14rem;
+	border: 2px solid;
+	background-color: black;	
+	padding: 0.5rem 2rem;
+	position: relative;
+	color: white;
+	list-style-type: none;
+	margin: 0;
+	overflow-y: auto;
+}
+
+.container .list-id {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 0.5rem;
+	font-size: 2rem;
+}
+
+.container .list .task-item {
+	text-align: center;
+	cursor: move;
+	font-size: 1rem;
+	padding: 0.1rem 0;
+	border: 1px solid;
+	border-radius: 5%;
+	margin: 0.1rem;
+}
+
+/* Drag&Drop placeholder */
+.container .list .dndPlaceholder {
+    display: block;
+    min-height: 1.4rem;
+    border: 1px solid;
+	border-radius: 5%;
+	margin: 0.1rem;
+}
+/* Container styles - END */
+
+/* some corrections for higher resolution (RWD)  */
+@media (min-width: 730px) {
+	.users-container {
+		flex-direction: row;
+	}
+	/* simulate "podium shape" */
+	.users-container .container:nth-child(1) { 
+		order: 2;
+		align-self: flex-start; 
+	}
+	.users-container .container:nth-child(2) { 
+		order: 1;
+		align-self: center; 
+	}
+	.users-container .container:nth-child(3) { 
+		order: 3; 
+		align-self: flex-end;
+	}
+}
